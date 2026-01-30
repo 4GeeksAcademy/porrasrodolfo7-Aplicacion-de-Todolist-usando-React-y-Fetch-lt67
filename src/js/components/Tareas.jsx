@@ -16,8 +16,8 @@ const Tareas = () => {
         }
     };
 
-    const removeHouseWork = (tareaABorrar) => {
-        const newHouseWork = houseWork.filter((_, index) => index !== tareaABorrar)
+    const removeHouseWork = (tareaParaBorrar) => {
+        const newHouseWork = houseWork.filter((_, index) => index !== tareaParaBorrar)
         setHouseWork(newHouseWork)
         setItemsNumber(newHouseWork.length)
     }
@@ -31,8 +31,8 @@ const Tareas = () => {
                         <input className="form-control border-0 p-0 shadow-none fs-5" onKeyDown={addHouseWork} type="text" value={tasks} onChange={e => setTasks(e.target.value)} placeholder={houseWork.length === 0 ? "No hay tareas, añadir tareas" : "Que falta por hacer?"}></input>
                     </div>
                     <ul className="list-group list-group-flush rounded-0">
-                        {houseWork.map((tarea, index) => (
-                            <li key={index} className="list-group-item d-flex justify-content-between align-items-center px-4 py-3 fs-5 task-input">{tarea}
+                        {houseWork.map((houseTasks, index) => (
+                            <li key={index} className="list-group-item d-flex justify-content-between align-items-center px-4 py-3 fs-5 task-input">{houseTasks}
                                 <button onClick={() => removeHouseWork(index)} type="button" className="btn delete-button">X</button>
                             </li>
                         ))}
