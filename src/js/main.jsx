@@ -10,9 +10,10 @@ import '../styles/index.css'
 
 // components
 import Home from './components/Home';
+import Tareas from './components/Tareas';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Home/>
-  </React.StrictMode>,
+    <Tareas />
+  </React.StrictMode>
 )
